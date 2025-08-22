@@ -13,23 +13,18 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "dtk6gui";
-  version = "6.0.33";
+  version = "6.0.41";
 
   src = fetchFromGitHub {
     owner = "linuxdeepin";
     repo = "dtk6gui";
     rev = finalAttrs.version;
-    hash = "sha256-ZnRhrlgrQ7Vusod2diFwVEVnNGHYNq5Ij12GbW6LXWc=";
+    hash = "sha256-EbMjjfnHjMNNdKlZVFgfruO4/PQn4B30WktYo0alfUk=";
   };
 
   patches = [
     ./fix-pkgconfig-path.patch
     ./fix-pri-path.patch
-    (fetchpatch {
-      name = "resolve-compilation-issues-on-Qt-6_9.patch";
-      url = "https://gitlab.archlinux.org/archlinux/packaging/packages/dtk6gui/-/raw/ae64c77a73cdea069579ecf6833be63635237180/qt-6.9.patch";
-      hash = "sha256-45L3ZQ9Hv7tLdDjtazLhVl8XgKBtcHL3CT2nw6GkqgM=";
-    })
   ];
 
   postPatch = ''
