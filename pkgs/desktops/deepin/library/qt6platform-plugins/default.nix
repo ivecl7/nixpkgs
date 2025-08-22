@@ -12,13 +12,13 @@
 
 stdenv.mkDerivation rec {
   pname = "qt6platform-plugins";
-  version = "6.0.33";
+  version = "6.0.41";
 
   src = fetchFromGitHub {
     owner = "linuxdeepin";
     repo = pname;
     rev = version;
-    hash = "sha256-uQ/dfk/HEvngTjHDLQOg965Jy+fH2YNfhKwXB+1BoUM=";
+    hash = "sha256-nzge6JmQfkhIGAt29jt7IpXZh7hUYDQDqrhpvPq/R9M=";
   };
 
   postUnpack = ''
