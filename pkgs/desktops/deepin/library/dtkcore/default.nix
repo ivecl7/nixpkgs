@@ -15,13 +15,13 @@
 
 stdenv.mkDerivation rec {
   pname = "dtkcore";
-  version = "5.6.32";
+  version = "5.7.21";
 
   src = fetchFromGitHub {
     owner = "linuxdeepin";
     repo = pname;
     rev = version;
-    hash = "sha256-APuBVgewr701wzfTRwaQIg/ERFIhabEs5Jd6+GvD04k=";
+    hash = "sha256-zJLtF9qLyfBA2kSpcQb6OywL8Jryke25KDFD0fi5Je8=";
   };
 
   patches = [
