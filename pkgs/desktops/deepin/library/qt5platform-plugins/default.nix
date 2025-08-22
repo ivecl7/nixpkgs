@@ -16,13 +16,13 @@
 
 stdenv.mkDerivation rec {
   pname = "qt5platform-plugins";
-  version = "5.6.32";
+  version = "5.7.21";
 
   src = fetchFromGitHub {
     owner = "linuxdeepin";
     repo = pname;
     rev = version;
-    hash = "sha256-jbt+ym6TQX3tecFCSlz8Z2ZnqOa69zYgaB5ohQM3lQg=";
+    hash = "sha256-4k0+smVJeaBduK5XCfYLprVL1vWk6tXPwYjxTL5JQsI=";
   };
 
   nativeBuildInputs = [
