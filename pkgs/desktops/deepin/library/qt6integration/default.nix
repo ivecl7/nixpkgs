@@ -12,13 +12,13 @@
 
 stdenv.mkDerivation rec {
   pname = "qt6integration";
-  version = "6.0.33";
+  version = "6.0.41";
 
   src = fetchFromGitHub {
     owner = "linuxdeepin";
     repo = pname;
     rev = version;
-    hash = "sha256-fxeXjUn1hJUE1Le24sqVEvKBX9Uo8qUVjr3sfz/5cQQ=";
+    hash = "sha256-UaUKViFnktqfwZu2ptnNha/+XRXYXoUrl3FJem1JSQQ=";
   };
 
   patches = [
