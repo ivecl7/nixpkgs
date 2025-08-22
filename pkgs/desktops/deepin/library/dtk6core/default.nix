@@ -15,23 +15,18 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "dtk6core";
-  version = "6.0.33";
+  version = "6.0.41";
 
   src = fetchFromGitHub {
     owner = "linuxdeepin";
     repo = "dtk6core";
     rev = finalAttrs.version;
-    hash = "sha256-AmGQoDt9qp0m0iV7WrR16DPTt80Y5leRUVXPOtHeugs=";
+    hash = "sha256-Ng/MlhK7bXMK+73cQw+zRh0dgM7sMv4WPDq/8F7GcO8=";
   };
 
   patches = [
     ./fix-pkgconfig-path.patch
     ./fix-pri-path.patch
-    (fetchpatch {
-      name = "resolve-compilation-issues-on-Qt-6_9.patch";
-      url = "https://github.com/linuxdeepin/dtkcore/commit/8f523a8b387a006b942268e2143d0d58c574f7c5.patch";
-      hash = "sha256-x8BfWCdsz8Bf/sAM7PymZWqlPyEabwP0e6ybfz/2oZ4=";
-    })
   ];
 
   postPatch = ''
