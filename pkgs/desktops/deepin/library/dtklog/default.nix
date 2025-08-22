@@ -12,13 +12,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "dtklog";
-  version = "0.0.1";
+  version = "0.0.5";
 
   src = fetchFromGitHub {
     owner = "linuxdeepin";
     repo = "dtklog";
     rev = finalAttrs.version;
-    hash = "sha256-8c3KL6pjAFPC4jRpOpPEbEDRBMWnDptwBSbEtcQcf5E=";
+    hash = "sha256-IscD9ItAexfbEGqulumV+UM3wqm9/JwTsAZf2QC5X0Y=";
   };
 
   nativeBuildInputs = [
