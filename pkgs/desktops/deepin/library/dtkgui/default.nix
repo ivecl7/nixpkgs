@@ -9,17 +9,23 @@
   dtkcore,
   lxqt,
   librsvg,
+  extra-cmake-modules,
+  libraw,
+  qt6Packages,
+  treeland-protocols,
+  wayland,
+  wayland-scanner,
 }:
 
 stdenv.mkDerivation rec {
   pname = "dtkgui";
-  version = "5.6.32";
+  version = "5.7.21";
 
   src = fetchFromGitHub {
     owner = "linuxdeepin";
     repo = pname;
     rev = version;
-    hash = "sha256-F3tuLV1hWoUZle0O66MQ+Ew9LRnP6N++HaqS88xBLRY=";
+    hash = "sha256-QgyY6vVWfivB+M/L9lfN/hiWBY3VEv0DsVgFC+/e3lw=";
   };
 
   patches = [
@@ -44,6 +50,12 @@ stdenv.mkDerivation rec {
     libsForQt5.qtbase
     lxqt.libqtxdg
     librsvg
+    extra-cmake-modules
+    libraw
+    qt6Packages.qwlroots
+    treeland-protocols
+    wayland
+    wayland-scanner
   ];
 
   propagatedBuildInputs = [
