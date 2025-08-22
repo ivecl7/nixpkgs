@@ -13,21 +13,16 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "dtk6log";
-  version = "0.0.2";
+  version = "0.0.5";
 
   src = fetchFromGitHub {
     owner = "linuxdeepin";
     repo = "dtk6log";
     rev = finalAttrs.version;
-    hash = "sha256-uPuka+uVCcl2sBMr1SpgqLpcIqZm6BDZyGd7FOraHVM=";
+    hash = "sha256-80vc7434Z2ELy4NTlcVAI3OGN2r6dM2SzdWDc03EP5o=";
   };
 
   patches = [
-    (fetchpatch {
-      name = "resolve-compilation-issues-on-Qt-6_9.patch";
-      url = "https://github.com/linuxdeepin/dtklog/commit/ab7ed5aa8433c726470f2aecc1d99f118eae8b63.patch";
-      hash = "sha256-QK4MOAzTZjjK5qfmzguXAgHO9guMCRN/5y+llBSY2vk=";
-    })
   ];
 
   nativeBuildInputs = [
