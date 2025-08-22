@@ -14,23 +14,18 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "dtk6widget";
-  version = "6.0.33";
+  version = "6.0.41";
 
   src = fetchFromGitHub {
     owner = "linuxdeepin";
     repo = "dtk6widget";
     rev = finalAttrs.version;
-    hash = "sha256-CSsN/6Geban/l6Rp5NuxIUomgTlqXyvttafTbjZIwSc=";
+    hash = "sha256-CoaAQRGdwAfi7DjQSZCeoPlz2pcoR0Pe+goPhmiEb0w=";
   };
 
   patches = [
     ./fix-pkgconfig-path.patch
     ./fix-pri-path.patch
-    (fetchpatch {
-      name = "resolve-compilation-issues-on-Qt-6_9.patch";
-      url = "https://gitlab.archlinux.org/archlinux/packaging/packages/dtk6widget/-/raw/ce8f89bbed6ebd4659c7f964f158857ebfdee01c/qt-6.9.patch";
-      hash = "sha256-LlFBXuoPxuszO9bkXK1Cy6zMTSnlh33UnmlKMJk3QH0=";
-    })
   ];
 
   postPatch = ''
